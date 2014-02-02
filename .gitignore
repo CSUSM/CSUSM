@@ -11,3 +11,7 @@
 *.lai
 *.la
 *.a
+
+# I don't want to put those ones, they're local only.
+ALCI
+CS311/FromServer
