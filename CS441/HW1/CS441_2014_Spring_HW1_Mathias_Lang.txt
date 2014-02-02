@@ -1,0 +1,8 @@
+Mathias LANG 
+CS 441 Homework Assignment 1
+01 Feb. 2014
+
+Topic requested:
+1) Secure coding practices
+2) Cloud Computing
+3) Design Pattern
