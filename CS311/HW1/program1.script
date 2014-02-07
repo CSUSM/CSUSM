@@ -1,0 +1,42 @@
+Script started on Thu 06 Feb 2014 09:24:55 AM PST
+]0;lang019@empress:~/CSUSM/CS311/HW1[lang019@empress HW1]$ g++ queu[K[K[K[Kstack.cpp m[Kclient1.cpp 
+]0;lang019@empress:~/CSUSM/CS311/HW1[lang019@empress HW1]$ ./a.out 
+type a postfix expression: 34+
+Result is: 7
+]0;lang019@empress:~/CSUSM/CS311/HW1[lang019@empress HW1]$ ./a.out 
+type a postfix expression: 345+*
+Result is: 27
+]0;lang019@empress:~/CSUSM/CS311/HW1[lang019@empress HW1]$ ./a.out 
+type a postfix expression: 722+-
+Result is: 3
+]0;lang019@empress:~/CSUSM/CS311/HW1[lang019@empress HW1]$ ./a.out 
+type a postfix expression: 34+56++
+Result is: 18
+]0;lang019@empress:~/CSUSM/CS311/HW1[lang019@empress HW1]$ ./a.out 
+type a postfix expression: 12+34*45+-+
+Result is: 6
+]0;lang019@empress:~/CSUSM/CS311/HW1[lang019@empress HW1]$ ./a.out 
+type a postfix expression: 1234567891234
+Error: Number of digit is not proportional to the number of operations (too many numbers).
+]0;lang019@empress:~/CSUSM/CS311/HW1[lang019@empress HW1]$ ./a.out 
+type a postfix expression: +
+Error: Number of digit is not proportional to the number of operations (too few numbers).
+]0;lang019@empress:~/CSUSM/CS311/HW1[lang019@empress HW1]$ ./a.out 
+type a postfix expression: 3+
+Error: Number of digit is not proportional to the number of operations (too few numbers).
+]0;lang019@empress:~/CSUSM/CS311/HW1[lang019@empress HW1]$ ./a.out 
+type a postfix expression: 3#
+Error: invalid item
+]0;lang019@empress:~/CSUSM/CS311/HW1[lang019@empress HW1]$ ./a.out 
+type a postfix expression: 2345+
+Result is: 9
+--------------------
+------- ERROR ------
+--------------------
+Some operand were not processed: Not enough operator provided in the expression
+Dump of stack:
+3
+2
+]0;lang019@empress:~/CSUSM/CS311/HW1[lang019@empress HW1]$ exit
+
+Script done on Thu 06 Feb 2014 09:27:17 AM PST

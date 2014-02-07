@@ -1,25 +1,27 @@
-
-INSTRUCTION:
- QUEUE class - header file template (by Yoshii) - Notes-2A
- You must complete the ** parts and then write queue.cpp 
-
-
+// -*- C++ -*-
 // =======================================================
-
 // HW1P1
-// Your name: **
+// Your name: Mathias LANG
 // Compiler:  g++ compiler
 // File type: queue header file queue.h
 
 //=====================================================
 
-  typedef ** el_t;          // el_t is an alias for the data type
+#include	<string>
+#include	<stdexcept>
 
-  const int MAX_SIZE = 10;  // this is the max number of elements
+typedef std::string el_t;          // el_t is an alias for the data type
+
+const int MAX_SIZE = 25;  // this is the max number of elements
 
 class queue  {
 
   private:
+  // PURPOSE: get the offset of the next element.
+  int	nextElem(int currVal);
+  // PURPOSE: Increment the value and rotate it if necessary;
+  int	incr(int currVal);
+
   // Data members are:
     el_t el[MAX_SIZE]; // an array called el.
                       //  Elements will be found between front and rear but
@@ -30,7 +32,16 @@ class queue  {
 
   public:    // prototypes to be used by the client
 
-    // ** add exception classes here
+    // exception handling classes  
+    class Overflow : public std::runtime_error {
+    public:
+        Overflow(std::string msg) : std::runtime_error(msg) {}
+    };
+    class Underflow : public std::runtime_error {
+    public:
+        Underflow(std::string msg) : std::runtime_error(msg) {}
+    };
+
 
    // constructor 
    queue(); 
@@ -72,7 +83,5 @@ class queue  {
    //if queue has just 1 element, does nothing
    //if queue has more than 1 element, moves the front one to the rear
    void goToBack();
-
-
 };           
 

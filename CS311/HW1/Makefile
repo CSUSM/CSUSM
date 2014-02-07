@@ -6,6 +6,8 @@ OBJS=	$(SRC:.cpp=.o)
 
 RM=	rm -rf
 
+CXXFLAGS += -W -Wall
+
 all:	$(NAME)
 
 $(NAME):	$(OBJS)

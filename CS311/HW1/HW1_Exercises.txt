@@ -1,0 +1,33 @@
+Q1) Warm Up Exercises [4pts].
+Draw the stack content after each push and popReport the type of error (and why the error occurred) and/or the computed result. 
+Input: 3141-*+5-
+
+[3]
+[3][1]
+[3][1][4]
+[3][1][4][1]
+[3][1][3]
+[3][3]
+[6]
+[6][5]
+[1]
+
+Input: 314-*+5-
+[3]
+[3][1]
+[3][1][4]
+[3][-3]
+[-9]
+Error: To few operands.
+
+Input: 314111111 .. (beyond the size of the stack)
+Error: Stack overflow (Max number of element is 10).
+
+Input: 3141+*
+[3]
+[3][1]
+[3][1][4]
+[3][1][4][1]
+[3][1][5]
+[3][5]
+Error: Too few operations.
