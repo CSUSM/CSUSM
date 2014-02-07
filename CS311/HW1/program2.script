@@ -1,0 +1,44 @@
+Script started on Thu 06 Feb 2014 09:44:07 AM PST
+]0;lang019@empress:~/CSUSM/CS311/HW1[lang019@empress HW1]$ g++ client2.cpp queue.cpp -o program2
+]0;lang019@empress:~/CSUSM/CS311/HW1[lang019@empress HW1]$ ./program2 
+A
+B
+C
+AA
+AB
+AC
+BA
+BB
+BC
+CA
+CB
+CC
+AAA
+AAB
+AAC
+ABA
+ABB
+ABC
+ACA
+ACB
+ACC
+BAA
+BAB
+BAC
+BBA
+BBB
+BBC
+BCA
+BCB
+BCC
+CAA
+CAB
+CAC
+CBA
+CBB
+CBC
+CCA
+Error: Cannot add a new element, queue is full
+]0;lang019@empress:~/CSUSM/CS311/HW1[lang019@empress HW1]$ exit
+
+Script done on Thu 06 Feb 2014 09:44:31 AM PST
