@@ -1,0 +1,193 @@
+CS351 - HW2
+===========
+
+Author: Mathias LANG
+Note: This is written in the [markdown](http://daringfireball.net/projects/markdown/) syntax.
+
+Part I: page 163 number 6
+-------------------------
+
+### a) A = A * (B + (C * A))
+#### Leftmost Derivation
+     <assign> => <id> = <expr>
+              => A = <expr>
+              => A = <id> * <expr>
+              => A = A * <expr>
+              => A = A * (<expr>)
+              => A = A * (<id> + <expr>)
+              => A = A * (B + <expr>)
+              => A = A * (B + (<expr>))
+              => A = A * (B + (<id> * <expr>)
+              => A = A * (B + (C * <expr>)
+              => A = A * (B + (C * <id>)
+              => A = A * (B + (C * A)
+
+#### Parse tree
+     <assign>
+       /|\
+      / | \
+     /  |  \
+    /   |   \
+   <id> = <expr>
+    |       /|\
+    A      / | \
+          /  |  \
+        <id> * <expr>
+         |      /|\
+         A     / | \
+              /  |  \
+             /   |   \
+            ( <expr>  )
+                /|\
+               / | \
+            <id> + <expr>
+             |      /|\
+             B     / | \
+                  /  |  \
+                 /   |   \
+                ( <expr>  )
+                    /|\
+                   / | \
+                <id> * <expr>
+                 |       |
+                 C      <id>
+                         |
+                         A
+
+
+### b) B = C * (A * C + B)
+#### Leftmost Derivation
+     <assign> => <id> = <expr>
+              => B = <expr>
+              => B = <id> * <expr>
+              => B = C * <expr>
+              => B = C * (<expr>)
+              => B = C * (<id> * <expr>)
+              => B = C * (A * <expr>)
+              => B = C * (A * <id> + <expr>)
+              => B = C * (A * C + <expr>)
+              => B = C * (A * C + <id>)
+              => B = C * (A * C + B)
+
+#### Parse tree
+     <assign>
+       /|\
+      / | \
+     /  |  \
+    /   |   \
+   <id> = <expr>
+    |       /|\
+    B      / | \
+          /  |  \
+        <id> * <expr>
+         |      /|\
+         C     / | \
+              /  |  \
+             /   |   \
+            ( <expr>  )
+                /|\
+               / | \
+            <id> * <expr>
+             |      /|\
+             A     / | \
+                <id> + <expr>
+                 |       |
+                 C      <id>
+                         |
+                         B
+
+
+
+### c) A = A * (B + (C))
+#### Leftmost Derivation
+     <assign> => <id> = <expr>
+              => A = <expr>
+              => A = <id> * <expr>
+              => A = A * <expr>
+              => A = A * (<expr>)
+              => A = A * (<id> + <expr>)
+              => A = A * (B + <expr>)
+              => A = A * (B + (<expr>))
+              => A = A * (B + (<id>))
+              => A = A * (B + (B))
+
+#### Parse tree
+     <assign>
+       /|\
+      / | \
+     /  |  \
+    /   |   \
+   <id> = <expr>
+    |       /|\
+    A      / | \
+          /  |  \
+        <id> * <expr>
+         |      /|\
+         A     / | \
+              /  |  \
+             /   |   \
+            (  <expr> )
+                /|\
+               / | \
+            <id> + <expr>
+             |       |
+             B     <expr>
+                    /|\
+                   / | \
+                  /  |  \
+                 /   |   \
+                (  <expr> )
+                     |
+                    <id>
+                     |
+                     B
+
+
+
+Part II: page 165 number 16
+---------------------------
+<assign> => (A | B | C) = <expr>
+<expr>   => <expr> (+ | *) <expr>
+         | (<expr>)
+         | (A | B | C)
+
+
+Part III: page 165 number 19
+----------------------------
+
+2. Semantic rule: <expr>.actual_type <-
+                  if (<var>[2].actual_type = int) and
+                        (<var>[3].actual_type = int)
+                     then int
+                     else 
+                          if (<var>[2].actual_type = <var>[3].actual_type)
+                          then real
+                          else error
+                  end if
+   Predicate:
+        <expr>.actual_type == <expr>.expected_type
+        && <expr>.actual_type != error
+
+
+Part IV: page 165 number 23
+---------------------------
+
+### a. a = 2 * (b - 1) - 1 { a > 0 }
+       0 < 2 * (b - 1) - 1
+       0 < 2 * b - 2 - 1
+       3 < 2 * b
+       ==> b > (3/2)
+
+### b. b = (c + 10) / 3 { b > 6 }
+       6 < (c + 10) / 3
+       18 < c + 10
+       ==> c > 8
+
+### c. a = a + 2 * b - 1 { a > 1 }
+       1 < a + 2 * b - 1
+       (2 - a) < (2 * b)
+       b > (1-a/2)
+
+### d. c = 2 * y + x - 1 { x > 11 }
+       11 < 2 * y + x - 1
+       12 < 2 * y + x
