@@ -1,0 +1,59 @@
+Script started on Tue 11 Feb 2014 09:55:48 AM CET
+geod@Barsoom:/mnt/Work/CSUSM/CS311/HW1P2$ ll Downloads/cuments/[K /mnt/Windows/[8@sudo mount[C[C[C[C[C[C[C[C[C[C[C[C[C[C[5P[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[5@sudo [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[8Pll[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K Documents/wnloads/[K[Kg++ client1.cpp stack.cpp -o s[Khw2[K1p12[K[K2
+geod@Barsoom:/mnt/Work/CSUSM/CS311/HW1P2$ ./hw1p2 < 34+< 34+[CE34+O34+F34+[1P34+[1P34+[1P34+[1P34+[1P34+[1P34+[1P4+[1P+[K[K
+type a postfix expression: 34+
+Result is: 7
+geod@Barsoom:/mnt/Work/CSUSM/CS311/HW1P2$ ./hw1p2
+type a postfix expression: 345+*
+Result is: 27
+geod@Barsoom:/mnt/Work/CSUSM/CS311/HW1P2$ ./hw1p2
+type a postfix expression: 722+-
+Result is: 3
+geod@Barsoom:/mnt/Work/CSUSM/CS311/HW1P2$ ./hw1p2
+type a postfix expression: 34+56++
+Result is: 18
+geod@Barsoom:/mnt/Work/CSUSM/CS311/HW1P2$ ./hw1p2
+type a postfix expression: 12+34*45+-+
+Result is: 6
+geod@Barsoom:/mnt/Work/CSUSM/CS311/HW1P2$ ./hw1p2
+type a postfix expression: 1234567891234
+Result is: 4
+--------------------
+------- ERROR ------
+--------------------
+Some operand were not processed: Not enough operator provided in the expression
+Dump of stack:
+3
+2
+1
+9
+8
+7
+6
+5
+4
+3
+2
+1
+geod@Barsoom:/mnt/Work/CSUSM/CS311/HW1P2$ ./hw1p2
+type a postfix expression: +
+Error: Number of digit is not proportional to the number of operations (too few numbers).
+geod@Barsoom:/mnt/Work/CSUSM/CS311/HW1P2$ ./hw1p2
+type a postfix expression: 3+
+Error: Number of digit is not proportional to the number of operations (too few numbers).
+geod@Barsoom:/mnt/Work/CSUSM/CS311/HW1P2$ ./hw1p2
+type a postfix expression: 3#
+Error: invalid item
+geod@Barsoom:/mnt/Work/CSUSM/CS311/HW1P2$ ./hw1p2
+type a postfix expression: 2345+
+Result is: 9
+--------------------
+------- ERROR ------
+--------------------
+Some operand were not processed: Not enough operator provided in the expression
+Dump of stack:
+3
+2
+geod@Barsoom:/mnt/Work/CSUSM/CS311/HW1P2$ exit
+
+Script done on Tue 11 Feb 2014 09:57:43 AM CET
