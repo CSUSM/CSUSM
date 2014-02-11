@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+
+<CustomerList>
+  <Customer>
+    <!-- Site informations -->
+    <Id>42</Id>
+    <login>lang019</login>
+    <hashPass>5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8</hashPass>
+
+    <!-- Personal informations -->
+    <FirstName>Mathias</FirstName>
+    <LastName>Lang</LastName>
+    <Birthdate>24/04/1992</Birthdate>
+
+    <Address>
+      <!-- There's also a billing address which has the same rows. -->
+      <!-- User also define his own labels (home, billing, parent's...) -->
+      <Home>
+        <Street/>
+        <City/>
+        <Zip></Zip>
+        <State/>
+        <Country/>
+      </Home>
+
+    </Address>
+
+    <Email>
+      <!-- Home, school and so on are user-defined -->
+      <Home>mathias.lang@epitech.eu</Home>
+      <School>lang019@cougars.csusm.edu</School>
+    </Email>
+
+  </Customer>
+</CustomerList>
