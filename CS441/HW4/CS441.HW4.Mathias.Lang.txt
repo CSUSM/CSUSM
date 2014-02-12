@@ -1,0 +1,35 @@
+Mathias LANG
+CS 441 Homework Assignment 4
+February 11th, 2014
+
+Team : Hodor
+
+Part I
+======
+
+[T] Jeff Rackauckas     949-683-7739      racka001@cougars.csusm.edu
+[D] John Fileccia       858-822-9030      filec001@cougars.csusm.edu
+[A] Correy Paxton       909-472-8475      paxto007@cougars.csusm.edu
+[T] Mathias Lang        760-917-9863      lang019@cougars.csusm.edu
+[D] Juliette Ly         760-917-9865      ly022@cougars.csusm.edu
+
+Legend:
+A => Analyst
+D => Developper / Programmer
+T => Tester
+
+
+Part 2 
+======
+
+I'm a tester, which means I come at the end of our team's food chain.
+I take the programmer's work as input (most of the time it will be an executable),
+and perform the tests on it, then give a feedback to the programmer.
+My tests will be based on the SRS written by the Analyst, formally documented and
+uploaded to Sharepoint using the template provided on moodle.
+
+My planning is to start to document the tests as soon as the SRS is available.
+This first work should be the longest. Once it's done, I will depends on the
+programmers delivering working executables to test. There's also the possibility 
+that, as we progress toward the project, we'll need to add some tests, but if
+the initial work is done right, there shouldn't be much.
