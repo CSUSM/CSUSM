@@ -76,7 +76,7 @@ p. 240, num. 12
 
 ### a. main calls sub1; sub1 calls sub2; sub2 calls sub3.
 In sub3, those variables are visibles:
-sub3.{a,z,w}, sub2.{b,z}, sub1.y.
+sub3.{a,x,w}, sub2.{b,z}, sub1.y.
 
 ### b. main calls sub1; sub1 calls sub3.
 In sub3, those variables are visibles:
@@ -96,4 +96,4 @@ sub2.{a,b,z}, sub3.{x,w}, sub1.y
 
 ### f. main calls sub3; sub3 calls sub2; sub2 calls sub1.
 In sub1, those variables are visibles:
-sub1.{a,y,z}, sub2.b, sub2.{x,w}
+sub1.{a,y,z}, sub2.b, sub3.{x,w}
