@@ -1,0 +1,99 @@
+HW3
+===
+
+p. 236, num. 2
+---------
+
+### Subject:
+    "Some programming languages are typeless. What are the obvious advantages
+          and disadvantages of having no types in a language?"
+
+### Advantages :
+- Easyier to write;
+- Shorter development process;
+- Less burden on the programmer;
+
+### Disadvantages:
+- Hurts readability;
+- Hurts reliability;
+- Longer debugging type, as the error appears dynamically (at runtime);
+
+
+p. 236, num. 5
+--------------
+
+### Subject:
+    "Describe a situation when a history-sensitive variable in a subprogram
+              is useful."
+
+### Answer
+    "If the value that the variable will use must be restricted to a scope,
+        but at the same time is expensive to compute, history-sensitive can
+        vastly improve performances." 
+
+
+p. 237, num. 8
+--------------
+
+### Subject:
+    "List all the variables, along with the program units where they are
+          declared, that are visible in the bodies of sub1, sub2, and sub3,
+          assuming static scoping is used."
+
+
+### Sub1:
+<global-scope>.{x,y,z}, sub1.{a,y,z}
+
+NOTE:
+<global-scope>.y and <global-scope>.z would be shadowed locally,
+                 but still accessible using their fully qualified name.
+
+
+### Sub2:
+<global-scope>.{x,y,z}, sub1.{a,y,z}, sub2.{a,b,z}
+
+NOTE:
+<global-scope>.y, <global-scope>.z, sub1.a and sub2.a would be shadowed locally,
+                 but still accessible using their fully qualified name.
+
+
+### Sub3:
+<global-scope>.{x,y,z}, sub3.{a,z,w}
+
+NOTE:
+<global-scope>.x would be shadowed locally,
+                 but still accessible using their fully qualified name.
+
+
+p. 240, num. 12
+---------------
+
+### Subject:
+    "Given the following calling sequences and assuming that dynamic scoping
+           is used, what variables are visible during execution of the last
+           subprogram activated? Include with each visible variable the name
+           of the unit where it is declared."
+
+### a. main calls sub1; sub1 calls sub2; sub2 calls sub3.
+In sub3, those variables are visibles:
+sub3.{a,z,w}, sub2.{b,z}, sub1.y.
+
+### b. main calls sub1; sub1 calls sub3.
+In sub3, those variables are visibles:
+sub3.{a,x,w}, sub1.{y,z}.
+
+### c. main calls sub2; sub2 calls sub3; sub3 calls sub1.
+In sub1, those variables are visibles:
+sub1.{a,y,z}, sub3.{x,w}, sub2.b.
+
+### d. main calls sub3; sub3 calls sub1.
+In sub1, those variables are visibles:
+sub1.{a,y,z}, sub3.{x,w}.
+
+### e. main calls sub1; sub1 calls sub3; sub3 calls sub2.
+In sub2, those variables are visibles:
+sub2.{a,b,z}, sub3.{x,w}, sub1.y
+
+### f. main calls sub3; sub3 calls sub2; sub2 calls sub1.
+In sub1, those variables are visibles:
+sub1.{a,y,z}, sub2.b, sub2.{x,w}
