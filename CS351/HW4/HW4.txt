@@ -1,0 +1,49 @@
+HW4
+===
+
+Author: Mathias LANG
+
+p. 314, 1
+---------
+
+Q: What are the arguments for and against representing Boolean values as single bits in memory?
+
+R: Boolean represented as single bit in memory are much more space-efficient:
+you can store up to 8 booleans in an octet, so you save a lot of space.
+However, this also imply that, to use a boolean, more operations are involved:
+in x86 ASM for example, a boolean would have to be loaded to a register, shifted at least one way (more probably 2), then we will be able to use x86 instructions on it (like test).
+In addition, some architecture are much slower / don't even work with unaligned access (ARM is notably notable for doing so).
+
+
+p. 314, 7
+---------
+
+Q: What significant justification is there for the -> operator in C and C++ ?
+
+R: The '->' (aka the structure dereference operator) doesn't allow an extra operation to be performed.
+It's perfectly possible to write any program without it, as :
+'a->b' is equivalent to '(*a).b'.
+However, it's an useful syntactic sugar, as the structure reference operator (the dot: '.') has precedence over the indirection operator ('*'), thus making the parenthesis mandatory.
+So the structure dereference operator makes code easyier to read & write.
+
+
+p. 314, 9
+---------
+
+Q: The unions in C and C++ are separate from the records of those languages, rather than combined as they are in Ada.
+What are the advantages and disadvantages to these two choices?
+
+R: Having discriminated unions like in Ada allows a program to do more static checks, hence making the code safer.
+However, the undiscriminated union as implemented in C (and Ada since 2005) allow users to reinterpret their data.
+For example, a process similar to virtual functions can be implemented in C using struct with function pointers and unions.
+
+
+p. 315, 22
+----------
+
+Q: Explain how coercion rules can weaken the beneficial effect of strong typing?
+
+R: Coercition consist of translation one data to another type: either by raw casting or another kind of translation (ex: number to string).
+Strong typing, on the other hand, ensure that the types involved in an expression are compatible.
+With too many coercion, or if the designer doesn't take enough care, the system can end up implicitly converting an offending type in an expression to a compatible one, even when the programmer made a mistake, thus voiding the benefit of strong typing.
+In general, we could say that coercions rules may make the code less predictable, thus harder to read.
