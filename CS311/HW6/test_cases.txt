@@ -1,0 +1,97 @@
+Script started on Mon 14 Apr 2014 11:36:28 AM PDT
+$ g++ main.cpp slist.cpp llist.cpp -std=c++11 -o hw6
+$ ./hw6
+A:
+[70]
+[66]
+B:
+[71]
+[67]
+C:
+[72]
+E:
+[Empty]
+F:
+[69]
+[73]
+G:
+[Empty]
+H:
+[73]
+[71]
+I:
+[69]
+[71]
+[65]
+Enter a vertex name to get the out degree ('!' to exit): 
+q
+Wrong name provided, result was not found.
+Enter a vertex name to get the out degree ('!' to exit): 
+$%^&*(
+Wrong name provided, result was not found.
+Enter a vertex name to get the out degree ('!' to exit): 
+Wrong name provided, result was not found.
+Enter a vertex name to get the out degree ('!' to exit): 
+Wrong name provided, result was not found.
+Enter a vertex name to get the out degree ('!' to exit): 
+Wrong name provided, result was not found.
+Enter a vertex name to get the out degree ('!' to exit): 
+Wrong name provided, result was not found.
+Enter a vertex name to get the out degree ('!' to exit): 
+Wrong name provided, result was not found.
+Enter a vertex name to get the out degree ('!' to exit): 
+G
+Value found: 0
+Enter a vertex name to get the out degree ('!' to exit): 
+H
+Value found: 2
+Enter a vertex name to get the out degree ('!' to exit): 
+I
+Value found: 3
+Enter a vertex name to get the out degree ('!' to exit): 
+!
+Enter a vertex name to get the adjacent vertices ('!' to exit):
+G
+Calling the llist destructor.
+[Empty result]
+Enter a vertex name to get the adjacent vertices ('!' to exit):
+H
+Calling the llist destructor.
+[73]
+[71]
+Enter a vertex name to get the adjacent vertices ('!' to exit):
+I
+Calling the llist destructor.
+[69]
+[71]
+[65]
+Enter a vertex name to get the adjacent vertices ('!' to exit):
+J
+Calling the llist destructor.
+[Empty result]
+Enter a vertex name to get the adjacent vertices ('!' to exit):
+!
+Calling the llist destructor.
+Calling the llist destructor.
+Calling the llist destructor.
+Calling the llist destructor.
+Calling the llist destructor.
+Calling the llist destructor.
+Calling the llist destructor.
+Calling the llist destructor.
+Calling the llist destructor.
+Calling the llist destructor.
+Calling the llist destructor.
+Calling the llist destructor.
+Calling the llist destructor.
+Calling the llist destructor.
+Calling the llist destructor.
+Calling the llist destructor.
+Calling the llist destructor.
+Calling the llist destructor.
+Calling the llist destructor.
+Calling the llist destructor.
+Calling the llist destructor.
+$ exit
+
+Script done on Mon 14 Apr 2014 11:37:42 AM PDT
