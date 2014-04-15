@@ -1,0 +1,39 @@
+p.520 n. 4
+==========
+Q: What are the disadvantages of designing an abstract data type to be a pointer?
+A: The first problems are the one inherent to pointers (arithmetic, null reference...):
+   Then, the comparison can be biased: the comparison will be by identity rather than value.
+   This may or may not be a problem, as long as the language provides a way to compare by value.
+   The third problem is a corollary to the first one: the user can just made up a variable of the
+   type, hence bypassing all the allocation (constructor) / deallocation (destructors). One way
+   to have destructor with pointers would be to use a GC.
+
+p. 521 n. 7
+===========
+Q: Explain the dangers of C's approach to encapsulation.
+A: The main problem is that the biggest part of encapsulation is done via hidding, rather than protection.
+	This hidding is achieved through definition hidding: a header file is preprocessed (which is a synonym for
+	copy-pasted) into the implementation file. Anyone with this header file will be able to access any method
+	or public variable of a the client related to the header, left appart any "static" method / variable.
+	static is actually the only rue level of protection here, as it's the only one that another unit (file)
+	would not be able to access even if it's aware of it's existence.
+	This whole "protection-is-name-hiding" approach leads to a load of problems: you can access a symbol using
+	the wrong datatype and your compiler will happily do so. To protect critical parts, you should rely on text
+	being hidden from the compiler while it's processing certain units (via #ifdef / #define)...
+
+p. 521 n. 8
+===========
+Q: Why didn't C++ eliminate the problems discussed in Problem 7?
+A: It didn't eliminates the problem because it evolved from C. Hence, it kept a lot of backward compatibility, and
+	the same way of doing basic things. While some problems where solved (like the protected access, which is in-between
+	normal and static in C), some stay, as the symbol access using wrong datatype (inherent to the linker, which doesn't
+	do type-checking).
+
+p. 521 n. 13
+============
+Q: What are the arguments for and against the C++ policy on inlining of methods?
+A: The issue is that the inline keyword is misleading to most programmer.
+	It is actually nothing more than a hint to the compiler, but it doesn't ensure that the function will be inlined.
+	This is an issue for a bunch of applications, including benchmarks. At the end of the day, the only difference of this
+	keyword is that it forces one to put the function definition in a header (cause obviously, inlined functions' body
+	has to be available somewhere in the compilation unit).

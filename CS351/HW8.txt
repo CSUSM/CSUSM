@@ -1,0 +1,26 @@
+p.572 n. 5
+==========
+Q: Compare the class entity access controls of C++ and Ada 95.
+A: C++ allow a greater control over its entities. Each entity can be either public, protected or private, restricting access to, respectively, no one, child class (inheriting / extending classes) and the class itself. Ada, on the other hand, has no similar functionality.
+
+
+p. 572 n. 8
+============
+Q: Explain the two problems with abstract data types that are ameliorated by inheritance.
+A: The problems solved are reusability of code and "extensibility".
+   Reusability because one won't have to copy/paste his code from one data type to another, allowing for a greater readability.
+   Extensibility because a method can accept a certain class as an argument, and get a child class of this one. This will allow the user to have a wider set of functionality, but the method will still be able to know that the entities it relies on are present.
+
+
+p. 572 n. 12
+============
+Q: What exactly does it mean for a subclass to have an is-a relationship with its parent class?
+
+A: It means the subclass inherits, or extends, the parent class. Hence, it has everything the base class has (data and method). It can in addition add it's own method, or override some of the base class method to change the behavior of the object (if the method is virtual). Inheritance is intended to be used as a way to change the behavior of an object (and not it's data).
+
+
+p. 573 n. 16:
+=============
+Q: What is the primary reason why all Java objects have a common ancestor?
+
+A: Then they have a set of common functionality built into any object. For example, one is sure he will always be able to call the methods toString or equals on any instance of a class, or any array. In addition, one can define a method that accept any class or array as a parameter if the method accept object of type "Object".
