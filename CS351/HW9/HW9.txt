@@ -1,0 +1,4 @@
+p. 723 n.9:
+===========
+
+A: This function, y, returns a sublist of the parameter 'lis' which starts at the element 'x'. If 'x' is not found, the list returned is empty.
